@@ -1,26 +1,19 @@
 package Service
 
 import (
-	. "ParkingLot"
+	. "ParkingLot/model"
 )
 
 type ParkingLotService struct {
-	ParkingLot ParkingLot
+	ParkingLot *ParkingLot
 }
 
-type IParkingLotService interface {
-	CreateParkingLot(lot ParkingLot)
-	GetParkingLot() ParkingLot
-	Park(car Car)
-	Leave(slotNumber int)
-}
-
-func (p *ParkingLotService) CreateParkingLot(lot ParkingLot) {
+func (p *ParkingLotService) CreateParkingLot(lot int) {
 	p.CreateParkingLot(lot)
 }
 
-func (p *ParkingLotService) GetParkingLot() ParkingLot {
-	return p.GetParkingLot()
+func (p *ParkingLotService) GetParkingLotStatus() ParkingLot {
+	return p.GetParkingLotStatus()
 }
 
 func (p *ParkingLotService) Park(car Car) {
