@@ -6,7 +6,7 @@ import (
 
 type IParkingLotService interface {
 	CreateParkingLot(lot int)
-	GetParkingLotStatus() ParkingLot
+	GetParkingLotStatus()
 	Park(car Car)
 	Leave(slotNumber int)
 }

@@ -5,21 +5,21 @@ import (
 )
 
 type ParkingLotService struct {
-	ParkingLot *ParkingLot
+	ParkingLot ParkingLot
 }
 
 func (p *ParkingLotService) CreateParkingLot(lot int) {
-	p.CreateParkingLot(lot)
+	p.ParkingLot.CreateParkingLot(lot)
 }
 
-func (p *ParkingLotService) GetParkingLotStatus() ParkingLot {
-	return p.GetParkingLotStatus()
+func (p *ParkingLotService) GetParkingLotStatus() {
+	p.ParkingLot.GetParkingLotStatus()
 }
 
 func (p *ParkingLotService) Park(car Car) {
-	p.Park(car)
+	p.ParkingLot.Park(car)
 }
 
 func (p *ParkingLotService) Leave(slotNumber int) {
-	p.Leave(slotNumber)
+	p.ParkingLot.Leave(slotNumber)
 }
